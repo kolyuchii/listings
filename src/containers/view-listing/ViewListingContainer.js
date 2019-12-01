@@ -8,7 +8,6 @@ import {
 } from 'store/listings';
 import { getDate } from 'utils/date';
 
-
 class ViewListingContainer extends Component {
     render() {
         const listingId = Number(this.props.match.params.number);
