@@ -66,7 +66,6 @@ class UpdateContainer extends Component {
             expired: date
         });
     }
-
     removePhoto(index) {
         if (this.state.images && this.state.images[index]) {
             const images = this.state.images;
@@ -76,6 +75,8 @@ class UpdateContainer extends Component {
             });
         }
     }
+
+    // Save images as base64
     addPhoto(event) {
         const element = event.target;
         const files = element.files;
@@ -108,6 +109,7 @@ class UpdateContainer extends Component {
         }
         formData.expired = this.state.expired;
 
+        // a bit of validation :)
         const errors = {};
         if (!formData.price || /\D/.test(formData.price) || formData.price <= 0) {
             errors.price = true;

@@ -18,7 +18,6 @@ class ListingContainer extends Component {
                 onClick={this.onClick.bind(this, index)}
             />);
         }
-        debugger;
         return (
             <EmptyListComponent />
         );

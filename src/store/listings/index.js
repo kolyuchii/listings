@@ -1,9 +1,11 @@
 export const SET_LISTINGS = Symbol('SET_LISTINGS');
-const storedData = window.localStorage.getItem('listings');
+const STORAGE_KEY = 'listings';
+const storedData = window.localStorage.getItem(STORAGE_KEY);
 const initialState = {
     listings: storedData ? JSON.parse(storedData) : [],
 };
 
+// add a new or update
 export function updateListing(data, index) {
     return function (dispatch, getState) {
         const state = getState();
@@ -19,7 +21,7 @@ export function updateListing(data, index) {
             listings.push(data);
         }
 
-        window.localStorage.setItem('listings', JSON.stringify(listings));
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(listings));
 
         dispatch(setListings(listings));
     }
@@ -33,7 +35,7 @@ export function deleteListing(index) {
             listings.splice(index, 1);
         }
 
-        window.localStorage.setItem('listings', JSON.stringify(listings));
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(listings));
 
         dispatch(setListings(listings));
     }
