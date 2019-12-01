@@ -55,8 +55,8 @@ const ListingViewComponent = (props) => {
                 <div className="view__block--label">Expired</div>
                 <div>{expired}</div>
             </div>
-            <button className="button" onClick={onEdit}>Edit</button>
-            <button className="button" onClick={onDelete}>Delete</button>
+            <button data-message="Edit button" className="button" onClick={onEdit} tabindex="0">Edit</button>
+            <button data-message="Delete listing button" className="button" onClick={onDelete} tabindex="1">Delete</button>
         </div>
     )
 };

@@ -88,7 +88,7 @@ const ListingComponent = (props) => {
                     <label className="update__block--label" htmlFor="expired">Expired</label>
                     {datepicker}
                 </div>
-                <button className="update__button" type="submit">Save</button>
+                <button data-message="Save button" className="update__button" type="submit" tabindex="0">Save</button>
             </form>
         </div>
     )

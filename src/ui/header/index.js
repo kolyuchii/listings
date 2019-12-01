@@ -4,12 +4,12 @@ import './header.scss';
 
 const HeaderComponent = () => {
     return (
-        <div className="header">
+        <header className="header">
             <h1 className="header__title">
                 <Link className="link header__title_link" to='/'>Zoopla</Link>
                 <Link className="link header__title_link" to='/add'>Add new</Link>
             </h1>
-        </div>
+        </header>
     );
 };
 
