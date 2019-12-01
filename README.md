@@ -37,3 +37,16 @@ We're looking for the following:
 * Beautiful code
 
 Feel free to make and state assumptions on any details not covered in the challenge.
+
+## HOW TO RUN
+###npm run start
+Start dev server
+
+###npm run build
+Generate production build
+
+###npm run test
+Run tests (jest)
+
+react-create-app as a base (ejected)
+The app uses localStorage to store all listings data (including images).
