@@ -1,0 +1,14 @@
+.view {
+  &__title {
+    font-size: 4vmin;
+    margin-bottom: 40px;
+  }
+  &__block {
+    margin-bottom: 30px;
+
+    &--label {
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+  }
+}
