@@ -4,6 +4,9 @@
   display: flex;
   justify-content: space-between;
   border-bottom: 1px solid #ddd;
+  position: fixed;
+  background-color: #f9f9f9;
+  box-shadow: 1px 0 5px #8c8c8c;
 
   &__title {
     font-size: 1em;
