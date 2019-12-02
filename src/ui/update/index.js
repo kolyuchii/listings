@@ -1,6 +1,7 @@
 import React from 'react';
 import './update.scss';
 import classnames from 'classnames';
+import PropTypes from 'prop-types';
 
 const ListingComponent = (props) => {
     const {
@@ -92,6 +93,21 @@ const ListingComponent = (props) => {
             </form>
         </div>
     )
+};
+
+ListingComponent.propTypes = {
+    title: PropTypes.string,
+    description: PropTypes.string,
+    address: PropTypes.string,
+    bedrooms: PropTypes.string,
+    postcode: PropTypes.string,
+    price: PropTypes.string,
+    images: PropTypes.array,
+    datepicker: PropTypes.object,
+    errors: PropTypes.object,
+    onSubmit: PropTypes.func,
+    addPhoto: PropTypes.func,
+    removePhoto: PropTypes.func,
 };
 
 export default ListingComponent;

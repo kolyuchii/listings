@@ -7,6 +7,7 @@ import {
     deleteListing
 } from 'store/listings';
 import { getDate } from 'utils/date';
+import PropTypes from 'prop-types';
 
 class ViewListingContainer extends Component {
     render() {
@@ -41,6 +42,10 @@ class ViewListingContainer extends Component {
         this.props.history.push('/');
     }
 }
+
+ViewListingContainer.propTypes = {
+    listings: PropTypes.array,
+};
 
 function mapStateToProps(state) {
     return {

@@ -39,13 +39,13 @@ We're looking for the following:
 Feel free to make and state assumptions on any details not covered in the challenge.
 
 ## HOW TO RUN
-###npm run start
+### npm run start
 Start dev server
 
-###npm run build
+### npm run build
 Generate production build
 
-###npm run test
+### npm run test
 Run tests (jest)
 
 react-create-app as a base (ejected)

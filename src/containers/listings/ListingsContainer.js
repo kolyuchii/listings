@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import ListingComponent from 'ui/listing';
 import EmptyListComponent from 'ui/empty';
+import PropTypes from 'prop-types';
 
 class ListingContainer extends Component {
     render() {
@@ -26,6 +27,10 @@ class ListingContainer extends Component {
         this.props.history.push(`/listings/${index}`);
     }
 }
+
+ListingContainer.propTypes = {
+    listings: PropTypes.array,
+};
 
 function mapStateToProps(state) {
     return {

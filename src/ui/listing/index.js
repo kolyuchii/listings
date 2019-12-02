@@ -1,6 +1,7 @@
 import React from 'react';
 import classnames from 'classnames';
 import './listing.scss';
+import PropTypes from 'prop-types';
 
 const ListingComponent = (props) => {
     const listing = classnames({
@@ -23,6 +24,16 @@ const ListingComponent = (props) => {
             </div>
         </div>
     )
+};
+
+ListingComponent.propTypes = {
+    onClick: PropTypes.func,
+    image: PropTypes.string,
+    address: PropTypes.string,
+    description: PropTypes.string,
+    postcode: PropTypes.string,
+    bedrooms: PropTypes.string,
+    price: PropTypes.string,
 };
 
 export default ListingComponent;

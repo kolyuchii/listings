@@ -1,13 +1,7 @@
 import React from 'react';
 import './view.scss';
-// A listing contains the following:
-// Multiple images
-// Number of bedrooms
-// Postcode
-// Address
-// Description
-// Asking price
-// Expired
+import PropTypes from 'prop-types';
+
 const ListingViewComponent = (props) => {
     const {
         description,
@@ -59,6 +53,18 @@ const ListingViewComponent = (props) => {
             <button data-message="Delete listing button" className="button" onClick={onDelete} tabIndex="0">Delete</button>
         </div>
     )
+};
+
+ListingViewComponent.propTypes = {
+    description: PropTypes.string,
+    address: PropTypes.string,
+    bedrooms: PropTypes.string,
+    postcode: PropTypes.string,
+    price: PropTypes.string,
+    images: PropTypes.array,
+    expired: PropTypes.string,
+    onEdit: PropTypes.func,
+    onDelete: PropTypes.func,
 };
 
 export default ListingViewComponent;

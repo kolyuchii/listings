@@ -9,6 +9,7 @@ import {
 } from 'store/listings';
 import {bindActionCreators} from 'redux';
 import serialize from 'utils/serialize-form';
+import PropTypes from 'prop-types';
 
 class UpdateContainer extends Component {
     constructor(props) {
@@ -144,6 +145,10 @@ class UpdateContainer extends Component {
 function checkextension(file) {
     return /\.(jpe?g|png)$/i.test(file.name);
 }
+
+UpdateContainer.propTypes = {
+    listings: PropTypes.array,
+};
 
 function mapStateToProps(state) {
     return {
